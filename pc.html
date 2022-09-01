@@ -17,7 +17,7 @@
   </script>
 </head>
 <body>
-  <h2>RICOH THETA V - SkyWay - Oculus Go</h2>
+  <h2>RICOH THETA V - SkyWay - Oculus Quest</h2>
   Room:<input id="roomname_text" type="text" size="32" value="test_go_room"></input>&nbsp;
   SkyWay API Key:<input id="api_key_text" type="text" size="32"></input>
   <br />
@@ -45,7 +45,18 @@
   <div>
     <video id="local_video" autoplay style="width: 320px; height: 180px; border: 1px solid black;"></video>
   </div>
-  Please connect with Oculus Go Browser: <span id="oculus_url"></span><br /><br />
+  <h3>接続方法</h3>
+  <ol>
+    <li>THETAをPCにつなぐ</li>
+    <li>静止画モードにする</li>
+    <li>GetDevicesを押す</li>
+    <li>VideoSizeをTHETA V4Kにする</li>
+    <li>THETAのモード着替えを2回押しライブストリーミングモードにする</li>
+    <li>StartVideoを押す（真っ黒画面でもOK）エラーアイコンが表示されていたらブラウザを更新して２からやり直し</li>
+    <li>Connectを押して下に表示されたURLにQuestでアクセス</li>
+  </ol>
+ 
+  Please connect with Oculus Quest Browser: <span id="oculus_url"></span><br /><br />
   <span id="jumb_page"></span>
   <div id="container">
   </div>
@@ -135,7 +146,7 @@
     const jupmSpan = document.getElementById('jumb_page');
     const jumpUrl = currentUrl.substr(0, pos + 1) + 'g.html';
     let str = 'Or, please open ' + '<a target="_blank" href="' + jumpUrl + '">' + jumpUrl + '</a>';
-    str = str + ' with Oculus Go Browser and type room: "' + roomname + '" , then submit.';
+    str = str + ' with Oculus Quest Browser and type room: "' + roomname + '" , then submit.';
     jupmSpan.innerHTML = str;
   }
 
