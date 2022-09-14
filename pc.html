@@ -313,6 +313,7 @@
     }
 
     // -- enum device --
+    stream.getTracks().forEach(track => track.stop());
     navigator.mediaDevices.getUserMedia({video: true, audio: false})
     .then(stream => callBackDeviceList(stream))
     .catch(err => console.error(err));
