@@ -205,25 +205,12 @@
 </head>
 
 <body>
-  <div id="wait_massage">Please wait for loading ...</div>
-  <a-scene>
-    <a-assets>
-      <video id="video1" autoplay loop crossorigin="anonymous" playsinline webkit-playsinline></video>
-    </a-assets>
+  
+    <video id="video1" autoplay loop crossorigin="anonymous" playsinline webkit-playsinline></video>
+    
     <video playsinline muted autoplay src="#video1"></video>
 
-    <a-camera user-height="0" wasd-controls-enabled="false" arrow-key-rotation>
-      <!-- Text element for display messaging.  Hide once video is playing. -->
-      <a-entity id="msg" position="0 -0.3 -1.5" text="align:center; 
-              width:3;
-              wrapCount:100;
-              color: #FF8080;
-              value:Please click window to start 360 video streaming."
-              hide-once-playing="#video1">
-      </a-entity>
-    </a-camera>   
-
-  </a-scene>
+    
 </body>
 <script type="text/javascript">
   //joinRoom();
