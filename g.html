@@ -159,22 +159,21 @@
 
   </script>
   <script>
-    AFRAME.registerComponent('play-on-window-click', {
-      init: function () {
-        this.onClick = this.onClick.bind(this);
-      },
-      play: function () {
-        window.addEventListener('click', this.onClick);
-      },
-      pause: function () {
-        window.removeEventListener('click', this.onClick);
-      },
-      onClick: function (evt) {
+    // AFRAME.registerComponent('play-on-window-click', {
+    //   init: function () {
+    //     this.onClick = this.onClick.bind(this);
+    //   },
+    //   play: function () {
+    //     window.addEventListener('click', this.onClick);
+    //   },
+    //   pause: function () {
+    //     window.removeEventListener('click', this.onClick);
+    //   },
         //hideWaitMessage();
-        joinRoom(null);
-        //startMediaAndJoinRoom();
-      }
-    });
+        //joinRoom(null);
+        startMediaAndJoinRoom();
+      
+    // });
 
     // AFRAME.registerComponent('hide-once-playing', {
     //   schema: {type: 'selector'},
