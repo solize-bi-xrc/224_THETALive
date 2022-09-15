@@ -158,65 +158,67 @@
 
   </script>
   <script>
-    AFRAME.registerComponent('play-on-window-click', {
-      init: function () {
-        this.onClick = this.onClick.bind(this);
-      },
-      play: function () {
-        window.addEventListener('click', this.onClick);
-      },
-      pause: function () {
-        window.removeEventListener('click', this.onClick);
-      },
-      onClick: function (evt) {
-        hideWaitMessage();
-        joinRoom(null);
-        //startMediaAndJoinRoom();
-      }
-    });
+    // AFRAME.registerComponent('play-on-window-click', {
+    //   init: function () {
+    //     this.onClick = this.onClick.bind(this);
+    //   },
+    //   play: function () {
+    //     window.addEventListener('click', this.onClick);
+    //   },
+    //   pause: function () {
+    //     window.removeEventListener('click', this.onClick);
+    //   },
+    //   onClick: function (evt) {
+    //     hideWaitMessage();
+    //     joinRoom(null);
+    //     //startMediaAndJoinRoom();
+    //   }
+    // });
 
-    AFRAME.registerComponent('hide-once-playing', {
-      schema: {type: 'selector'},
-      init: function () {
-        this.onPlaying = this.onPlaying.bind(this);
-        this.onPause = this.onPause.bind(this);
-      },
-      play: function () {
-        if (this.data) {
-          this.data.addEventListener('playing', this.onPlaying);
-          this.data.addEventListener('pause', this.onPause);
-        }
-      },
-      pause: function () {
-        if (this.data) {
-          this.data.removeEventListener('playing', this.onPlaying);
-          this.data.removeEventListener('pause', this.onPause);
-        }
-      },
-      onPlaying: function (evt) {
-        this.el.setAttribute('visible', false);
-      },
-      onPause: function (evt) {
-        this.el.setAttribute('visible', true);
-      }
-    });
+    // AFRAME.registerComponent('hide-once-playing', {
+    //   schema: {type: 'selector'},
+    //   init: function () {
+    //     this.onPlaying = this.onPlaying.bind(this);
+    //     this.onPause = this.onPause.bind(this);
+    //   },
+    //   play: function () {
+    //     if (this.data) {
+    //       this.data.addEventListener('playing', this.onPlaying);
+    //       this.data.addEventListener('pause', this.onPause);
+    //     }
+    //   },
+    //   pause: function () {
+    //     if (this.data) {
+    //       this.data.removeEventListener('playing', this.onPlaying);
+    //       this.data.removeEventListener('pause', this.onPause);
+    //     }
+    //   },
+    //   onPlaying: function (evt) {
+    //     this.el.setAttribute('visible', false);
+    //   },
+    //   onPause: function (evt) {
+    //     this.el.setAttribute('visible', true);
+    //   }
+    // });
 
   </script>
 </head>
 
 <body>
-  <div id="wait_massage">Please wait for loading ...</div>
-  <a-scene>
+  <div>
+    <video id="video1" autoplay style="width: 320px; height: 180px; border: 1px solid black;"></video>
+  </div>
+  <!-- <a-scene>
     <a-assets>
       <video id="video1" autoplay loop crossorigin="anonymous" playsinline webkit-playsinline></video>
     </a-assets>
 
     <a-video src="#video1" position="0 2.5 -3" rotation="0 0 0" width="4" height="2.25" play-on-window-click></a-video>
     
-    </a-videosphere>
+    </a-videosphere> -->
 
-    <a-camera user-height="0" wasd-controls-enabled="false" arrow-key-rotation>
-      <!-- Text element for display messaging.  Hide once video is playing. -->
+    <!-- <a-camera user-height="0" wasd-controls-enabled="false" arrow-key-rotation>
+       Text element for display messaging.  Hide once video is playing.
       <a-entity id="msg" position="0 -0.3 -1.5" text="align:center; 
               width:3;
               wrapCount:100;
@@ -226,7 +228,7 @@
       </a-entity>
     </a-camera>   
 
-  </a-scene>
+  </a-scene> -->
 </body>
 <script type="text/javascript">
   //joinRoom();
