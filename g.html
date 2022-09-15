@@ -168,11 +168,10 @@
     //   pause: function () {
     //     window.removeEventListener('click', this.onClick);
     //   },
-    //   onClick: function (evt) {
-    //     hideWaitMessage();
-    //     joinRoom(null);
-    //     //startMediaAndJoinRoom();
-    //   }
+        hideWaitMessage();
+        joinRoom(null);
+        //startMediaAndJoinRoom();
+      
     // });
 
     // AFRAME.registerComponent('hide-once-playing', {
@@ -206,7 +205,7 @@
 
 <body>
   <div>
-    <video id="video1" autoplay style="width: 320px; height: 180px; border: 1px solid black;"></video>
+    <video id="video1" width="400px" autoplay muted playsinline></video>
   </div>
   <!-- <a-scene>
     <a-assets>
