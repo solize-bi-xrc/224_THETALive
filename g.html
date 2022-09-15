@@ -121,10 +121,10 @@
         let remoteId = stream.peerId;
         attachVideo(remoteId, stream);
       });
-      meshRoom.on('peerLeave', function(peerId) {
-        console.log('--hit--');
-        detachVideo(peerId);
-      });
+      // meshRoom.on('peerLeave', function(peerId) {
+      //   console.log('--hit--');
+      //   detachVideo(peerId);
+      // });
     });
 
     // -- kick to play in iOS 11 Safari --
