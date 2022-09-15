@@ -122,6 +122,7 @@
         attachVideo(remoteId, stream);
       });
       meshRoom.on('peerLeave', function(peerId) {
+        console.log('--hit--');
         detachVideo(peerId);
       });
     });
