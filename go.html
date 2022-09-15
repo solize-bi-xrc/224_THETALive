@@ -27,7 +27,7 @@
     }
 
     function _logStream(stream) {
-      //console.log(msg + ': id=' + stream.id);
+      console.log(msg + ': id=' + stream.id);
       const videoTracks = stream.getVideoTracks();
       if (videoTracks) {
         console.log('videoTracks.length=' + videoTracks.length);
@@ -170,8 +170,8 @@
       },
       onClick: function (evt) {
         hideWaitMessage();
-        //joinRoom(null);
-        startMediaAndJoinRoom();
+        joinRoom(null);
+        //startMediaAndJoinRoom();
       }
     });
 
